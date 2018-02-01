@@ -10,6 +10,9 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 library(tidyverse)
+library(prettyR)
+library(here)
+library(devtools)
 ```
 
 # packages-report
@@ -28,25 +31,27 @@ library(tidyverse)
 
 * ~~Open [R/03_barchart-packages-built.R](R/03_barchart-packages-built.R). Fill in the missing pieces of the script as directed. Run it. Commit and push the current state.~~
 
-* Fill in the blanks below in this README, using the results stored elsewhere.
+* ~~Fill in the blanks below in this README, using the results stored elsewhere.~~
 
 * If you get this far, write an R script to run the whole analysis and, perhaps, another script that does a `make clean` style reset.
 
 ## Overview
 
-The goal of packages-report is to FINISH THIS SENTENCE.
+The goal of packages-report is to find the number of add-on packages installed, and determine which version of R they were built under.
 
 ```{r, include = FALSE}
 ## load data/add-on-packages-freqtable.csv here in this chunk
+apt_freqtable <- read_csv(here("data", "add-on-packages-freqtable.csv"))
 ```
 
-I have `FILL THIS IN!!!` add-on packages installed.
+I have `r sum(apt_freqtable$n)` add-on packages installed.
 
 Here's how they break down in terms of which version of R they were built under, which is related to how recently they were updated on CRAN.
 
 ```{r, echo = FALSE}
 ## print the frequency table here
 ## make it prettier if you know how
+apt_freqtable
 ```
 
 ![](figs/built-barchart.png)

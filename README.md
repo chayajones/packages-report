@@ -18,18 +18,25 @@ Workshop challenge checklist
 
 -   ~~Open [R/03\_barchart-packages-built.R](R/03_barchart-packages-built.R). Fill in the missing pieces of the script as directed. Run it. Commit and push the current state.~~
 
--   Fill in the blanks below in this README, using the results stored elsewhere.
+-   ~~Fill in the blanks below in this README, using the results stored elsewhere.~~
 
 -   If you get this far, write an R script to run the whole analysis and, perhaps, another script that does a `make clean` style reset.
 
 Overview
 --------
 
-The goal of packages-report is to FINISH THIS SENTENCE.
+The goal of packages-report is to find the number of add-on packages installed, and determine which version of R they were built under.
 
-I have `FILL THIS IN!!!` add-on packages installed.
+I have 149 add-on packages installed.
 
 Here's how they break down in terms of which version of R they were built under, which is related to how recently they were updated on CRAN.
+
+    #> # A tibble: 3 x 3
+    #>   Built     n   prop
+    #>   <chr> <int>  <dbl>
+    #> 1 3.4.1    14 0.0940
+    #> 2 3.4.2    61 0.409 
+    #> 3 3.4.3    74 0.497
 
 ![](figs/built-barchart.png)
 
