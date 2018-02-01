@@ -1,3 +1,7 @@
+library(tidyverse)
+library(here)
+library(devtools)
+
 ## create a data frame from data/installed-packages.csv
 ## with, e.g., readr::read_csv() or read.csv()
 
